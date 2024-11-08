@@ -53,6 +53,20 @@ public:
 
 };
 
+class Group {
+	Student* students;
+	int amountOfStudents = 1;
+public:
+	Group() {
+		students = new Student[amountOfStudents];
+	}
+
+	~Group() {
+		delete[] students;
+		students = nullptr;
+	}
+};
+
 int main()
 {
 	Student obj;
